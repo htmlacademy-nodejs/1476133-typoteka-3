@@ -1,6 +1,6 @@
 'use strict';
 
-const { DATE_PERIOD } = require(`./constants`);
+const {DATE_PERIOD} = require(`./constants`);
 
 module.exports.getRandomInt = (min, max) => {
   min = Math.ceil(min);
@@ -9,18 +9,18 @@ module.exports.getRandomInt = (min, max) => {
 };
 
 module.exports.shuffle = (someArray) => {
-    for (let i = someArray.length - 1; i > 0; i--) {
-        const randomPosition = Math.floor(Math.random() * i);
-        [someArray[i], someArray[randomPosition]] = [someArray[randomPosition], someArray[i]];
-    }
+  for (let i = someArray.length - 1; i > 0; i--) {
+    const randomPosition = Math.floor(Math.random() * i);
+    [someArray[i], someArray[randomPosition]] = [someArray[randomPosition], someArray[i]];
+  }
 
-    return someArray;
+  return someArray;
 };
 
- module.exports.getRandomDate = () => {
-    const start = new Date(); ;
-    const end = new Date();
-    end.setMonth(start.getMonth() - DATE_PERIOD);
-     
-     return new Date(start.getTime() + Math.random() * (end.getTime() - start.getTime()));
- }
+module.exports.getRandomDate = () => {
+  const start = new Date();
+  const end = new Date();
+  end.setMonth(start.getMonth() - DATE_PERIOD);
+
+  return new Date(start.getTime() + Math.random() * (end.getTime() - start.getTime()));
+};
