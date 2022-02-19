@@ -26,4 +26,4 @@ const getRandomDate = () => {
   return new Date(start.getTime() + Math.random() * (end.getTime() - start.getTime()));
 };
 
-module.exports = {getRandomInt, shuffle, getRandomDate}
+module.exports = {getRandomInt, shuffle, getRandomDate};
